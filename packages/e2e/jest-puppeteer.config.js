@@ -1,7 +1,8 @@
 module.exports = {
   launch: {
     headless: false,
-    slowMo: 10,
-    devtools: true
+    slowMo: 100,
+    devtools: true,
+    waitUntil: 'networkidle'
   }
 }

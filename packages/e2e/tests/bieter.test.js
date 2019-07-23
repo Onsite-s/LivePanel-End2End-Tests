@@ -1,5 +1,9 @@
+const puppeteer = require('puppeteer');
+
 describe('Bieter User - Standardansicht', () => {
   beforeAll(async () => {
+    browser = await puppeteer.launch();
+    page = await browser.newPage()
     await page.goto('http://staging-van-ham.auctionng.de/login.html')
   })
 
