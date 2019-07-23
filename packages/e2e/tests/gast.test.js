@@ -4,7 +4,7 @@ describe('Gast User - Standardansicht', () => {
   beforeAll(async () => {
     browser = await puppeteer.launch();
     page = await browser.newPage()
-    await page.goto('http://staging-van-ham.auctionng.de/live_bid_panel/index.php?language=de');
+    await page.goto('http://staging-van-ham.auctionng.de/live_bid_panel/index.php?language=de', { waitUntil: 'networkidle2' });
   });
 
   it('sollte den Seitentitel "A:NG - Live Bidding 3.0 Beta 2" enthalten', async () => {
