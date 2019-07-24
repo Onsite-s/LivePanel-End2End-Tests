@@ -4,7 +4,7 @@ const username = process.env.USERNAME_AUKTIONATOR
 const password = process.env.PASSWORD_AUKTIONATOR
 const baseUrl = process.env.BASE_URL
 
-describe('Bieter User - Standardansicht', () => {
+describe('Auktionator User - Standardansicht', () => {
   let browser
   let page
 

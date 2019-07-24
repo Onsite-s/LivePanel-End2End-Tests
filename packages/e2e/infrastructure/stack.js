@@ -1,4 +1,5 @@
 const { join } = require('path')
+
 const {
   Stack,
   Duration
@@ -10,7 +11,13 @@ module.exports = class E2EPuppeteer extends Stack {
   constructor(parent, id, props) {
     super(parent, id, props)
 
-    const { baseUrl, usernameBid, passwordBid, } = props
+    const {
+      BASE_URL,
+      USERNAME_BID,
+      PASSWORD_BID,
+      USERNAME_AUKTIONATOR,
+      PASSWORD_AUKTIONATOR,
+    } = props
 
     const lambda = new Function(this, 'E2EPuppeteerFunction', {
       functionName: 'e2e-puppeteer-function',
@@ -20,9 +27,11 @@ module.exports = class E2EPuppeteer extends Stack {
       memorySize: 1600,
       code: Code.asset(join(__dirname, '../build')),
       environment: {
-        BASE_URL: baseUrl,
-        USERNAME_BID: usernameBid,
-        PASSWORD_BID: passwordBid
+        BASE_URL,
+        USERNAME_BID,
+        PASSWORD_BID,
+        USERNAME_AUKTIONATOR,
+        PASSWORD_AUKTIONATOR,
       },
     })
   }
