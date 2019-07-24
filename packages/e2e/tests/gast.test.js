@@ -2,6 +2,7 @@ const baseUrl = process.env.BASE_URL || 'http://staging-van-ham.auctionng.de'
 
 describe('Gast User - Standardansicht', () => {
   beforeAll(async () => {
+    jest.setTimeout(15000)
     await page.goto(`${baseUrl}/live_bid_panel/index.php?language=de`, { waitUntil: 'networkidle2' })
   })
 

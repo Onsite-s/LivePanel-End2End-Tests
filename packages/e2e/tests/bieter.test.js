@@ -4,6 +4,7 @@ const baseUrl = process.env.BASE_URL
 
 describe('Bieter User - Standardansicht', () => {
   beforeAll(async () => {
+    jest.setTimeout(15000)
     await page.goto(`${baseUrl}/login.html`, { waitUntil: 'networkidle2' })
   })
 
@@ -25,6 +26,5 @@ describe('Bieter User - Standardansicht', () => {
     await page.goto(`${baseUrl}/live_bid_panel/index.php?language=de`, { waitUntil: 'networkidle2' });
 
     await page.evaluate(() => document.querySelector('#save_inet_bid').click());
-  }, 10000)
-
+  })
 })
