@@ -3,7 +3,10 @@
   "name": "e2e",
   "version": "1.0.0",
   "scripts": {
-    "test": "dotenv -e .env jest --runInBand"
+    "test": "dotenv -e .env jest --runInBand",
+    "test:bieter": "dotenv jest ./tests/bieter.test.js --runInBand",
+    "test:gast": "dotenv jest ./tests/gast.test.js --runInBand",
+    "test:auktionator": "dotenv jest ./tests/auktionator.test.js --runInBand"
   },
   "devDependencies": {
     "jest": "^24.8.0",
