@@ -14,10 +14,10 @@ module.exports = class E2EPuppeteer extends Stack {
 
     const lambda = new Function(this, 'E2EPuppeteerFunction', {
       functionName: 'e2e-puppeteer-function',
-      runtime: Runtime.NODEJS_10_X,
+      runtime: Runtime.NODEJS_8_10,
       handler: 'runner.run',
       timeout: Duration.seconds(300),
-      memorySize: 512,
+      memorySize: 1600,
       code: Code.asset(join(__dirname, '../build')),
       environment: {
         BASE_URL: baseUrl,
