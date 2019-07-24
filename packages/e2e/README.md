@@ -1,9 +1,19 @@
 # E2E Live Panel Tests
 
-## Setup
+## Start local tests
 
 ```bash
-npx jest ./tests/gast.test.js
-npx jest ./tests/bieter.test.js
-npx jest ./tests/auktionator.test.js
+npm run test
+```
+
+## Deploy/Update AWS Lambda Funktion
+
+```bash
+npm run deploy
+```
+
+## Run AWS Lambda Funktion
+
+```bash
+npm run run
 ```
