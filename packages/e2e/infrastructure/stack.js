@@ -19,9 +19,10 @@ module.exports = class E2EPuppeteer extends Stack {
       timeout: Duration.seconds(300),
       code: Code.asset(join(__dirname, '../build')),
       environment: {
-        baseUrl,
-        usernameBid,
-        passwordBid,
+        BASE_URL: baseUrl,
+        USERNAME_BID: usernameBid,
+        PASSWORD_BID: passwordBid,
+        CUSTOM_CHROME: 'true',
       },
     })
   }
