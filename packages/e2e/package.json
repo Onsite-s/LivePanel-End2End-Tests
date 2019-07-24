@@ -3,7 +3,7 @@
   "name": "e2e",
   "version": "1.0.0",
   "scripts": {
-    "build": "rimraf build && mkdir build && cp -R package.json build && PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true npm install --production --prefix build && cp -R chrome build && cp -R tests build && cp runner.js build",
+    "build": "rimraf build && mkdir build && cp -R package.json build && PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true npm install --production --prefix build && cp -R chrome build && cp -R tests build && cp -R jest-puppeteer.config.js build && cp runner.js build",
     "deploy": "dotenv -- cdk deploy --require-approval never --app infrastructure/app.js",
     "test": "dotenv jest --runInBand"
   },
@@ -20,6 +20,7 @@
     "@aws-cdk/aws-lambda": "^1.1.0",
     "@aws-cdk/core": "^1.1.0",
     "aws-cdk": "^1.1.0",
+    "aws-sdk": "^2.498.0",
     "dotenv-cli": "^2.0.1",
     "puppeteer": "^1.19.0",
     "rimraf": "^2.6.3"

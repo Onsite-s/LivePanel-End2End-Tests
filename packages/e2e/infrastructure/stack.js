@@ -17,6 +17,7 @@ module.exports = class E2EPuppeteer extends Stack {
       runtime: Runtime.NODEJS_10_X,
       handler: 'runner.run',
       timeout: Duration.seconds(300),
+      memorySize: 512,
       code: Code.asset(join(__dirname, '../build')),
       environment: {
         BASE_URL: baseUrl,
