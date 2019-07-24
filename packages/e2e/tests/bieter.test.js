@@ -4,7 +4,7 @@ const baseUrl = process.env.BASE_URL
 
 describe('Bieter User - Standardansicht', () => {
   beforeAll(async () => {
-    jest.setTimeout(15000)
+    jest.setTimeout(20000)
     await page.goto(`${baseUrl}/login.html`, { waitUntil: 'networkidle2' })
   })
 
