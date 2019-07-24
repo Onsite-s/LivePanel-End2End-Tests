@@ -1,11 +1,10 @@
 const dotenv = require('dotenv')
-console.log(dotenv.config().parsed)
 const { App } = require('@aws-cdk/core')
-const WebApi = require('./stack')
+const E2EPuppeteer = require('./stack')
 
 const app = new App()
 
-new WebApi(app, 'E2E-Puppeteer', {
+new E2EPuppeteer(app, 'E2E-Puppeteer', {
   ...dotenv.config().parsed,
 })
 
