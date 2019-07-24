@@ -3,7 +3,7 @@
   "name": "e2e",
   "version": "1.0.0",
   "scripts": {
-    "test:e2e": "jest"
+    "test": "jest --runInBand"
   },
   "devDependencies": {
     "jest": "^24.8.0",
