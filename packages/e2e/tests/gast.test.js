@@ -1,7 +1,23 @@
-const baseUrl = process.env.BASE_URL || 'http://staging-van-ham.auctionng.de'
+const chrome = require('chrome-aws-lambda')
+
+const baseUrl = process.env.BASE_URL
 
 describe('Gast User - Standardansicht', () => {
+  let browser
+  let page
+
   beforeAll(async () => {
+    browser = await chrome.puppeteer.launch({
+      args: chrome.args,
+      defaultViewport: chrome.defaultViewport,
+      executablePath: await chrome.executablePath,
+      headless: chrome.headless,
+      slowMo: 0,
+      devtools: true,
+      timeout: 0,
+    })
+    page = await browser.newPage()
+
     jest.setTimeout(20000)
     await page.goto(`${baseUrl}/live_bid_panel/index.php?language=de`, { waitUntil: 'networkidle2' })
   })
