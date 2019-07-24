@@ -22,8 +22,7 @@ module.exports = class E2EPuppeteer extends Stack {
       environment: {
         BASE_URL: baseUrl,
         USERNAME_BID: usernameBid,
-        PASSWORD_BID: passwordBid,
-        CUSTOM_CHROME: 'true',
+        PASSWORD_BID: passwordBid
       },
     })
   }
