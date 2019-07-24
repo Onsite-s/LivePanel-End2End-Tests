@@ -12,7 +12,7 @@ describe('Bieter User - Standardansicht', () => {
     await page.goto(`${baseUrl}/logout.html`, { waitUntil: 'networkidle2' })
   })
 
-  test('Benutzername "sk@onsite.org" mit gültigem Passwort sollte sich anmelden können und auf der /my_activity.html geleitet werden', async () => {
+  test(`Benutzername ${username} mit gültigem Passwort sollte sich anmelden können und auf der /my_activity.html geleitet werden`, async () => {
     const usernameInput = await page.$('#login_email')
     await usernameInput.type(username)
     const passwordInput = await page.$('#login_password')
