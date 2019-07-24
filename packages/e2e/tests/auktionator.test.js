@@ -25,6 +25,9 @@ describe('Bieter User - Standardansicht', () => {
 
     await page.goto(`${baseUrl}/live_bid_panel/index.php?language=de`, { waitUntil: 'networkidle2' });
 
-    await page.evaluate(() => document.querySelector('#bidder_paddle2_1').click());
+    //await page.evaluate(() => document.querySelector('#save_inet_bid_by_auctioneer').click())
+    await page.evaluate(() => document.querySelector('#save_hall_bid').click());
+    await page.evaluate(() => document.querySelector('#save_hall_bid').click());
+    await page.evaluate(() => document.querySelector('#save_hall_bid').click());
   })
 })
