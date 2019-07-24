@@ -1,5 +1,4 @@
 const AWS = require('aws-sdk')
-AWS.config.region = 'eu-central-1'
 const lambda = new AWS.Lambda()
 
 invokeE2E()

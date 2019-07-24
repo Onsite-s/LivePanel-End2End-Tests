@@ -8,7 +8,8 @@
     "test:auktionator": "dotenv jest ./tests/auktionator.test.js --runInBand",
     "build": "rimraf build && mkdir build && cp -R package.json build && npm install --production --prefix build && cp -R tests build && cp -R jest.config.js build && cp runner.js build",
     "deploy": "dotenv -- cdk deploy --require-approval never --app infrastructure/app.js",
-    "test": "dotenv jest ./tests --runInBand"
+    "test": "dotenv jest ./tests --runInBand",
+    "run": "dotenv node invoke.js"
   },
   "dependencies": {
     "chrome-aws-lambda": "^1.19.0",
