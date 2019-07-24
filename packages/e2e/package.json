@@ -3,7 +3,7 @@
   "name": "e2e",
   "version": "1.0.0",
   "scripts": {
-    "test": "jest --runInBand"
+    "test": "dotenv -e .env jest --runInBand"
   },
   "devDependencies": {
     "jest": "^24.8.0",
@@ -15,5 +15,7 @@
     "preset": "jest-puppeteer",
     "setupFilesAfterEnv": []
   },
-  "dependencies": {}
+  "dependencies": {
+    "dotenv-cli": "^2.0.1"
+  }
 }
