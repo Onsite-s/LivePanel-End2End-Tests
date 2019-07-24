@@ -7,16 +7,14 @@
     "deploy": "dotenv -- cdk deploy --require-approval never --app infrastructure/app.js",
     "test": "dotenv jest --runInBand"
   },
-  "jest": {
-    "verbose": true,
-    "preset": "jest-puppeteer",
-    "setupFilesAfterEnv": []
-  },
   "dependencies": {
+    "chrome-aws-lambda": "^1.19.0",
+    "chrome-paths": "^1.0.0",
     "jest": "^24.8.0",
+    "jest-environment-puppeteer": "^4.3.0",
     "jest-puppeteer": "^4.3.0",
-    "puppeteer-core": "^1.19.0",
-    "chrome-aws-lambda": "^1.19.0"
+    "module-alias": "^2.1.0",
+    "puppeteer-core": "^1.19.0"
   },
   "devDependencies": {
     "@aws-cdk/aws-lambda": "^1.1.0",
@@ -25,5 +23,8 @@
     "aws-sdk": "^2.498.0",
     "dotenv-cli": "^2.0.1",
     "rimraf": "^2.6.3"
+  },
+  "_moduleAliases": {
+    "puppeteer": "node_modules/puppeteer-core"
   }
 }
