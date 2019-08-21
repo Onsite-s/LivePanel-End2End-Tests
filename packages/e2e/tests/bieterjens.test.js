@@ -2,7 +2,7 @@ const username = process.env.USERNAME_BID
 const password = process.env.PASSWORD_BID
 const baseUrl = process.env.BASE_URL
 
-describe('Bieter User - Standardansicht', () => {
+describe.skip('Bieter User - Standardansicht', () => {
   var pageLive;
 
   beforeAll(async () => {
@@ -32,38 +32,38 @@ describe('Bieter User - Standardansicht', () => {
   })
 
   test(`Benutzername ${username} biete auf aktiven Artikel`, async () => {
-    
+
     await pageLive.goto(`${baseUrl}/live_bid_panel/index.php?language=de`, { waitUntil: 'networkidle2' });
 
     var r;
-    
-      await pageLive.evaluate(() => document.querySelector('#save_inet_bid').click());
-      r = Math.random()*5000;
-      await pageLive.waitFor(r);
-    
-      await pageLive.evaluate(() => document.querySelector('#save_inet_bid').click());
-      r = Math.random()*5000;
-      await pageLive.waitFor(r);
-    
-      await pageLive.evaluate(() => document.querySelector('#save_inet_bid').click());
-      r = Math.random()*5000;
-      await pageLive.waitFor(r);
-    
-      await pageLive.evaluate(() => document.querySelector('#save_inet_bid').click());
-      r = Math.random()*5000;
-      await pageLive.waitFor(r);
-    
-      await pageLive.evaluate(() => document.querySelector('#save_inet_bid').click());
-      r = Math.random()*5000;
-      await pageLive.waitFor(r);
-    
-      await pageLive.evaluate(() => document.querySelector('#save_inet_bid').click());
-      r = Math.random()*5000;
-      await pageLive.waitFor(r);
-    
-      await pageLive.evaluate(() => document.querySelector('#save_inet_bid').click());
-      r = Math.random()*5000;
-      await pageLive.waitFor(r);
+
+    await pageLive.evaluate(() => document.querySelector('#save_inet_bid').click());
+    r = Math.random() * 5000;
+    await pageLive.waitFor(r);
+
+    await pageLive.evaluate(() => document.querySelector('#save_inet_bid').click());
+    r = Math.random() * 5000;
+    await pageLive.waitFor(r);
+
+    await pageLive.evaluate(() => document.querySelector('#save_inet_bid').click());
+    r = Math.random() * 5000;
+    await pageLive.waitFor(r);
+
+    await pageLive.evaluate(() => document.querySelector('#save_inet_bid').click());
+    r = Math.random() * 5000;
+    await pageLive.waitFor(r);
+
+    await pageLive.evaluate(() => document.querySelector('#save_inet_bid').click());
+    r = Math.random() * 5000;
+    await pageLive.waitFor(r);
+
+    await pageLive.evaluate(() => document.querySelector('#save_inet_bid').click());
+    r = Math.random() * 5000;
+    await pageLive.waitFor(r);
+
+    await pageLive.evaluate(() => document.querySelector('#save_inet_bid').click());
+    r = Math.random() * 5000;
+    await pageLive.waitFor(r);
 
   })
 })

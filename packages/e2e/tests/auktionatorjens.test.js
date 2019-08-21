@@ -2,7 +2,7 @@ const username = process.env.USERNAME_AUKTIONATOR
 const password = process.env.PASSWORD_AUKTIONATOR
 const baseUrl = process.env.BASE_URL
 
-describe('Bieter User - Standardansicht', () => {
+describe.skip('Bieter User - Standardansicht', () => {
   var pageLive
 
   beforeAll(async () => {
@@ -45,7 +45,7 @@ describe('Bieter User - Standardansicht', () => {
   })
 
   test(`User kann sich in das Live Panel einloggen als USER`, async () => {
-    
+
     //Prüfen ob User wirklich eingeloggt ist
     const found = (await pageLive.content()).match("ausgeloggt")
     if (found != null) {
@@ -53,7 +53,7 @@ describe('Bieter User - Standardansicht', () => {
     }
 
 
-    
+
   })
 
   test(`Gebote abgeben in Live Panel`, async () => {

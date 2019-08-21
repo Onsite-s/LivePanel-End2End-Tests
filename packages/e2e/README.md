@@ -12,8 +12,14 @@ npm run test
 npm run deploy
 ```
 
-## Run AWS Lambda Funktion
+## Invoke AWS Lambda Funktion
 
 ```bash
-npm run run
+npm run invoke
+```
+
+## Stress test using AWS Lambda Function
+
+```bash
+npm run invoke 200
 ```

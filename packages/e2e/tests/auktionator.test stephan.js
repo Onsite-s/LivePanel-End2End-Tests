@@ -2,7 +2,7 @@ const username = process.env.USERNAME_AUKTIONATOR
 const password = process.env.PASSWORD_AUKTIONATOR
 const baseUrl = process.env.BASE_URL
 
-describe('Bieter User - Standardansicht', () => {
+describe.skip('Bieter User - Standardansicht', () => {
   beforeAll(async () => {
     jest.setTimeout(20000)
     await page.goto(`${baseUrl}/login.html`, { waitUntil: 'networkidle2' })
