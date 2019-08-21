@@ -8,7 +8,7 @@ async function invokeE2E(count) {
   const lambdaInvokeList = new Array(count)
     .fill({})
     .map(() => lambda.invoke({
-      FunctionName: 'e2e-tests-function',
+      FunctionName: 'e2e-puppeteer-function',
       InvocationType: 'RequestResponse',
       LogType: 'Tail',
       Payload: JSON.stringify({})
