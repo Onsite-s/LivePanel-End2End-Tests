@@ -12,18 +12,18 @@
     "invoke": "dotenv -- node invoke.js"
   },
   "dependencies": {
-    "chrome-aws-lambda": "1.19.0",
+    "chrome-aws-lambda": "1.20.0",
     "jest": "24.9.0",
     "jest-puppeteer": "4.3.0",
-    "puppeteer-core": "1.19.0"
+    "puppeteer-core": "1.20.0"
   },
   "devDependencies": {
-    "@aws-cdk/aws-lambda": "1.5.0",
-    "@aws-cdk/core": "1.5.0",
-    "aws-cdk": "1.5.0",
-    "aws-sdk": "2.514.0",
+    "@aws-cdk/aws-lambda": "1.9.0",
+    "@aws-cdk/core": "1.9.0",
+    "aws-cdk": "1.9.0",
+    "aws-sdk": "2.534.0",
     "dotenv-cli": "2.0.1",
-    "puppeteer": "1.19.0",
+    "puppeteer": "1.20.0",
     "rimraf": "3.0.0"
   }
 }
