@@ -19,12 +19,14 @@ async function invokeE2E(count) {
 
   try {
     const lambdaResults = await Promise.all(lambdaInvokeList);
+
     lambdaResults.forEach(({ LogResult, Payload }) => {
+      if (LogResult.includes('Function not found:')) return console.log(LogResult);
+
       const logResults = Buffer.from(LogResult, 'base64').toString('ascii');
-      const payload = JSON.parse(Payload);
-      const {
-        results: { success, numFailedTests, numPassedTests, numPendingTests, testResults },
-      } = JSON.parse(Payload);
+      const { results: { success, numFailedTests, numPassedTests, numPendingTests, testResults } = {} } = JSON.parse(
+        Payload
+      );
       console.log(logResults);
       console.log('Erfolgreiche Ausführung aller Tests: ', success);
       console.log('Erfolgreiche Tests: ', numPassedTests);
