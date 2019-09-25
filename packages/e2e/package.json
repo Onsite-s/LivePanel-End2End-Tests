@@ -8,6 +8,7 @@
     "test:auktionator": "dotenv -- jest ./tests/auktionator.test.js --runInBand",
     "build": "rimraf build && mkdir build && cp -R package.json build && npm install --production --prefix build && cp -R tests build && cp runner.js build",
     "deploy": "dotenv -- cdk deploy --require-approval never --app infrastructure/app.js",
+    "build_win": "rimraf \"../build\" && mkdir \"../build\" && copy package.json \"../build\" && copy tests \"../build\" && copy runner.js \"../build\" && \"../build.bat\" && move \"../build\" ./",
     "test": "dotenv -- jest --runInBand",
     "invoke": "dotenv -- node invoke.js"
   },
