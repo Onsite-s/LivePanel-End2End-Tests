@@ -22,7 +22,7 @@
     "@aws-cdk/aws-lambda": "1.9.0",
     "@aws-cdk/core": "1.9.0",
     "aws-cdk": "1.9.0",
-    "aws-sdk": "2.534.0",
+    "aws-sdk": "2.814.0",
     "dotenv-cli": "2.0.1",
     "puppeteer": "1.20.0",
     "rimraf": "3.0.0"
